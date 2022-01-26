@@ -1,0 +1,26 @@
+plugins {
+    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+    id 'java'
+    id "io.freefair.lombok" version "6.3.0"
+}
+
+group = 'me.zixuan'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '17'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation platform('io.projectreactor:reactor-bom:2020.0.15')
+    implementation 'io.projectreactor:reactor-core'
+    implementation 'org.junit.jupiter:junit-jupiter:5.7.0'
+//    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testImplementation 'org.reactivestreams:reactive-streams-tck:1.0.2'
+    testImplementation 'io.projectreactor:reactor-test'
+}
+
+test {
+    useJUnitPlatform()
+}
