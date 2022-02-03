@@ -1,9 +1,8 @@
-package me.zixuan.simple;
+package me.zixuan.reactive.simple;
 
 import lombok.val;
 import org.junit.jupiter.api.Test;
 import reactor.core.Disposable;
-import reactor.core.publisher.BaseSubscriber;
 import reactor.core.publisher.Flux;
 
 class FluxTest {

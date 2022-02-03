@@ -1,4 +1,4 @@
-package me.zixuan.simple;
+package me.zixuan.reactive.simple;
 
 import reactor.core.publisher.Flux;
 import reactor.util.function.Tuples;

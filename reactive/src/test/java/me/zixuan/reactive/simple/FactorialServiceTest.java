@@ -1,10 +1,7 @@
-package me.zixuan.simple;
+package me.zixuan.reactive.simple;
 
 import lombok.val;
 import org.junit.jupiter.api.Test;
-import reactor.core.publisher.Flux;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class FactorialServiceTest {
 
@@ -14,6 +11,6 @@ class FactorialServiceTest {
         factorialGenerator
                 .doOnNext(System.out::println)
                 .last()
-                .subscribe();
+                .subscribe(n -> System.out.println("Last element is: " + n));
     }
 }

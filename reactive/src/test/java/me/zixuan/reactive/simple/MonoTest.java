@@ -1,4 +1,4 @@
-package me.zixuan.simple;
+package me.zixuan.reactive.simple;
 
 import org.junit.jupiter.api.Test;
 import reactor.core.publisher.Flux;

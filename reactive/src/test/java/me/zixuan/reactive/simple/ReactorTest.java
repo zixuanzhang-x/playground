@@ -1,17 +1,14 @@
-package me.zixuan.simple;
+package me.zixuan.reactive.simple;
 
 import lombok.val;
 import org.junit.jupiter.api.Test;
 import org.reactivestreams.Subscription;
 import reactor.core.publisher.BaseSubscriber;
 import reactor.core.publisher.Flux;
-import reactor.core.publisher.Mono;
 import reactor.util.function.Tuples;
 
 import java.util.LinkedList;
 import java.util.List;
-import java.util.Optional;
-import java.util.concurrent.Callable;
 import java.util.concurrent.atomic.AtomicBoolean;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
