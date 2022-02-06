@@ -1,0 +1,22 @@
+custom:
+  name: testName
+  number: 777
+
+  custom-list[0]: customListElement0
+  custom-list[1]: customListElement1
+
+  custom-map:
+    anyKey1: anyValue1
+    anyKey2: anyValue2
+
+  first-nested-custom:
+    nested-name: nestedTestName0
+    nested-number: 11
+  second-nested-custom:
+    nested-name: nestedTestName1
+    nested-number: 883
+
+  nested-outer-class.nested-outer-class-name: nestedOuterClassName0
+
+item:
+  item-field: beanPropertyValue1
