@@ -1,4 +1,8 @@
 rootProject.name = 'playground'
 include 'algorithms'
 include 'reactive'
+include 'reactive-kt'
+include 'feature-demos'
+include 'feature-demos-kt'
+include 'blog-kt'
 

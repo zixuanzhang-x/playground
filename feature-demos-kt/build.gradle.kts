@@ -1,7 +1,10 @@
+import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
+
 plugins {
+    kotlin("jvm") version "1.6.10"
     id("org.springframework.boot") version "2.6.3"
     id("io.spring.dependency-management") version "1.0.11.RELEASE"
-    java
+    kotlin("plugin.spring") version "1.6.10"
     id("io.freefair.lombok") version "6.3.0"
 }
 
@@ -15,10 +18,20 @@ repositories {
 
 dependencies {
     implementation("org.springframework.boot:spring-boot-starter")
+    implementation("org.jetbrains.kotlin:kotlin-reflect")
+    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
+//    implementation(kotlin("stdlib"))
     annotationProcessor("org.springframework.boot:spring-boot-configuration-processor")
 }
 
-tasks.getByName<Test>("test") {
+tasks.withType<KotlinCompile> {
+    kotlinOptions {
+        freeCompilerArgs = listOf("-Xjsr305=strict")
+        jvmTarget = "17"
+    }
+}
+
+tasks.withType<Test> {
     useJUnitPlatform()
 }
